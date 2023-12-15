@@ -1,0 +1,34 @@
+{
+  "name": "@mastoryberlin/shared",
+  "version": "0.1.0",
+  "type": "commonjs",
+  "description": "",
+  "main": "./out/index.js",
+  "types": "./out/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mastoryberlin/shared.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "author": "Felix Schwarz",
+  "license": "ISC",
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check build-only build:scripts",
+    "test:unit": "vitest --environment jsdom",
+    "build-only": "vite build",
+    "build-module": "tsc --declaration --resolveJsonModule --outDir out ./index.ts",
+    "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
+    "bump-version": "node out/bump-version",
+    "release": "yarn build-module && yarn bump-version"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "fast-glob": "^3.3.2",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "typescript": "~4.7.4"
+  }
+}
