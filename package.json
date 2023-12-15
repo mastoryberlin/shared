@@ -1,6 +1,6 @@
 {
   "name": "@mastoryberlin/shared",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "commonjs",
   "description": "",
   "main": "./out/index.js",

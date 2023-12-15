@@ -5,6 +5,7 @@
   ],
   "exclude": [],
   "compilerOptions": {
+    "esModuleInterop": false,
     "module": "CommonJS",
     "lib": [
       "ES2022",
