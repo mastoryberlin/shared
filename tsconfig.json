@@ -16,10 +16,5 @@
     "sourceMap": true,
     "isolatedModules": true,
     "preserveValueImports": false
-  },
-  "references": [
-    {
-      "path": "./tsconfig.config.json"
-    }
-  ]
+  }
 }
