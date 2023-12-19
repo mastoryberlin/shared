@@ -49,7 +49,7 @@ export function parseCodeExtensions(pathToMainTs: string) {
     findDefaultExport(unitMainTs)
 
     if (exportedObject) {
-      const actionProperty = exportedObject.properties.find((p: any) => p.name.getText() === 'actions') as ts.ObjectLiteralElementLike | undefined
+      const actionProperty = (exportedObject as ts.ObjectLiteralExpression).properties.find((p: any) => p.name.getText() === 'actions') as ts.ObjectLiteralElementLike | undefined
       if (actionProperty) {
         actionProperty.forEachChild((n: any) => {
           if (n.kind === ts.SyntaxKind.ObjectLiteralExpression) {
