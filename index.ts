@@ -14,7 +14,7 @@ export function parseCodeExtensions(pathToMainTs: string) {
     )
 
     let defaultExportNode: ts.Node
-    let exportedObject: ts.ObjectLiteralExpression
+    let exportedObject: ts.ObjectLiteralExpression | undefined = undefined
     const findDefaultExport = function (node: ts.Node) {
       if (node.kind === ts.SyntaxKind.ExportAssignment) {
         defaultExportNode = node
